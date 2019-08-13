@@ -17,36 +17,29 @@ using System.Windows.Forms;
     Student id: 301041266
     Date: Aug/13/2019
     
-    Description: This is the Start Form class
+    Description: This is the Order Form class
 
     Assignment: Dollar Computers
  */
 
 namespace COMP123_Assignment5
 {
-    public partial class StartForm : Form
+    public partial class OrderForm : Form
     {
-        public StartForm()
+        public OrderForm()
         {
             InitializeComponent();
         }
 
-        private void StartNewOrderButton_Click(object sender, EventArgs e)
-        {
-            Program.Forms[FormName.SELECT_FORM].Show();
-            this.Hide();
-        }
-
-        private void ExitButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void LoadSavedOrderButton_Click(object sender, EventArgs e)
+        private void BackButton_Click(object sender, EventArgs e)
         {
             Program.Forms[FormName.PRODUCT_INFO_FORM].Show();
-            //Program.Forms[FormName.PRODUCT_INFO_FORM].();
             this.Hide();
+        }
+
+        private void FinishButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
