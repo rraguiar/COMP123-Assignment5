@@ -8,6 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+    CENTENNIAL COLLEGE
+    COMP123 - Programming 2 - C# Windows Forms - IDE
+   
+    Assignment 5 - Summer 2019
+    Author: Rafael Aguiar
+    Student id: 301041266
+    Date: Aug/13/2019
+    
+    Description: This is the Start Form class
+
+    Assignment: Dollar Computers
+ */
+
 namespace COMP123_Assignment5
 {
     public partial class StartForm : Form

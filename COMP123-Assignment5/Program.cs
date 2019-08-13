@@ -4,6 +4,21 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+    CENTENNIAL COLLEGE
+    COMP123 - Programming 2 - C# Windows Forms - IDE
+   
+    Assignment 5 - Summer 2019
+    Author: Rafael Aguiar
+    Student id: 301041266
+    Date: Aug/13/2019
+    
+    Assignment: Dollar Computers
+
+    Release Control:
+    - August 13, 2019: U.I. forms first release
+ */
+
 namespace COMP123_Assignment5
 {
     public static class Program
@@ -20,12 +35,13 @@ namespace COMP123_Assignment5
             Application.SetCompatibleTextRenderingDefault(false);
 
             Forms = new Dictionary<FormName, Form>();
+            Forms.Add(FormName.SPLASH_FORM, new Splashform());
             Forms.Add(FormName.START_FORM, new StartForm());
             Forms.Add(FormName.SELECT_FORM, new SelectForm());
             Forms.Add(FormName.PRODUCT_INFO_FORM, new ProductInfoForm());
             Forms.Add(FormName.ORDER_FORM, new OrderForm());
 
-            Application.Run(Forms[FormName.START_FORM]);
+            Application.Run(Forms[FormName.SPLASH_FORM]);
         }
     }
 }
