@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderForm));
             this.FinishButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
@@ -38,9 +39,10 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ProductPrintForm = new Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,6 +64,7 @@
             this.CancelButton.TabIndex = 4;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // BackButton
             // 
@@ -93,7 +96,7 @@
             this.toolStripSeparator2,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(182, 29);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(50, 29);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // printToolStripMenuItem
@@ -104,6 +107,7 @@
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.printToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.printToolStripMenuItem.Text = "&Print";
+            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -115,6 +119,7 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -123,6 +128,12 @@
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
             this.editToolStripMenuItem.Text = "&Edit";
+            // 
+            // backBToolStripMenuItem
+            // 
+            this.backBToolStripMenuItem.Name = "backBToolStripMenuItem";
+            this.backBToolStripMenuItem.Size = new System.Drawing.Size(132, 30);
+            this.backBToolStripMenuItem.Text = "&Back";
             // 
             // helpToolStripMenuItem
             // 
@@ -137,12 +148,15 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.aboutToolStripMenuItem.Text = "&About...";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
-            // backBToolStripMenuItem
+            // ProductPrintForm
             // 
-            this.backBToolStripMenuItem.Name = "backBToolStripMenuItem";
-            this.backBToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
-            this.backBToolStripMenuItem.Text = "&Back";
+            this.ProductPrintForm.DocumentName = "document";
+            this.ProductPrintForm.Form = this;
+            this.ProductPrintForm.PrintAction = System.Drawing.Printing.PrintAction.PrintToPreview;
+            this.ProductPrintForm.PrinterSettings = ((System.Drawing.Printing.PrinterSettings)(resources.GetObject("ProductPrintForm.PrinterSettings")));
+            this.ProductPrintForm.PrintFileName = null;
             // 
             // OrderForm
             // 
@@ -156,7 +170,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "OrderForm";
@@ -183,5 +197,6 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem backBToolStripMenuItem;
+        private Microsoft.VisualBasic.PowerPacks.Printing.PrintForm ProductPrintForm;
     }
 }

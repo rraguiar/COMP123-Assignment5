@@ -31,19 +31,6 @@ namespace COMP123_Assignment5
             InitializeComponent();
         }
 
-        /// <summary>
-        /// This method handle the CANCELBUTTON click, by moving
-        /// back to the SelectForm
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void BackButton_Click(object sender, EventArgs e)
-        {
-            Program.Forms[FormName.SELECT_FORM].Show();
-            this.Hide();
-        }
-
-
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
