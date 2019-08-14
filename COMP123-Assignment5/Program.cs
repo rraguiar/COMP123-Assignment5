@@ -1,4 +1,5 @@
-﻿using System;
+﻿using COMP123_Assignment5.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -25,6 +26,8 @@ namespace COMP123_Assignment5
     {
         public static Dictionary<FormName, Form> Forms;
 
+        public static Product product;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -37,9 +40,11 @@ namespace COMP123_Assignment5
             Forms = new Dictionary<FormName, Form>();
             Forms.Add(FormName.SPLASH_FORM, new Splashform());
             Forms.Add(FormName.START_FORM, new StartForm());
-            Forms.Add(FormName.SELECT_FORM, new SelectForm());
+            Forms.Add(FormName.SELECT_FORM, new SelectProductForm());
             Forms.Add(FormName.PRODUCT_INFO_FORM, new ProductInfoForm());
             Forms.Add(FormName.ORDER_FORM, new OrderForm());
+
+            product = new Product();
 
             Application.Run(Forms[FormName.SPLASH_FORM]);
         }
