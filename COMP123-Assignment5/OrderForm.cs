@@ -40,7 +40,7 @@ namespace COMP123_Assignment5
 
         private void FinishButton_Click(object sender, EventArgs e)
         {
-            MessageBox messageBox = new MessageBox();
+            //MessageBox messageBox = new MessageBox();
             Application.Exit();
         }
 
@@ -57,7 +57,7 @@ namespace COMP123_Assignment5
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Program.aboutForm.ShowDialog();
+            //Program.aboutForm.ShowDialog();
         }
     }
 }
