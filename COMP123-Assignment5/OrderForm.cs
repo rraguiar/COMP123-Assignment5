@@ -40,7 +40,7 @@ namespace COMP123_Assignment5
 
         private void FinishButton_Click(object sender, EventArgs e)
         {
-            //MessageBox messageBox = new MessageBox();
+            MessageBox.Show("Thank you for shopping with Dollar Computers!\n\nYour order will be processed in 7-10 business days.");
             Application.Exit();
         }
 
@@ -55,9 +55,14 @@ namespace COMP123_Assignment5
             Application.Exit();
         }
 
+        /// <summary>
+        /// This method handles the Tool Strip Menu About event handler
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Program.aboutForm.ShowDialog();
+            Program.Forms[FormName.ABOUT_FORM].ShowDialog();
         }
     }
 }

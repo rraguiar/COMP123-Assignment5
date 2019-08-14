@@ -50,7 +50,11 @@ namespace COMP123_Assignment5
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (Program.LoadSavedOrder == true)
+            {
+                //here I will load the content of the file.
+                MessageBox.Show("clicked on load saved order button");
+            }
         }
     }
 }

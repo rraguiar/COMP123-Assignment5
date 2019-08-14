@@ -44,8 +44,8 @@ namespace COMP123_Assignment5
 
         private void LoadSavedOrderButton_Click(object sender, EventArgs e)
         {
+            Program.LoadSavedOrder = true;
             Program.Forms[FormName.PRODUCT_INFO_FORM].Show();
-            //Program.Forms[FormName.PRODUCT_INFO_FORM].();
             this.Hide();
         }
     }

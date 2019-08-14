@@ -22,10 +22,11 @@ using System.Windows.Forms;
 
 namespace COMP123_Assignment5
 {
+    
     public static class Program
     {
         public static Dictionary<FormName, Form> Forms;
-
+        public static bool LoadSavedOrder = false;
         public static Product product;
 
         /// <summary>
@@ -43,6 +44,7 @@ namespace COMP123_Assignment5
             Forms.Add(FormName.SELECT_FORM, new SelectProductForm());
             Forms.Add(FormName.PRODUCT_INFO_FORM, new ProductInfoForm());
             Forms.Add(FormName.ORDER_FORM, new OrderForm());
+            Forms.Add(FormName.ABOUT_FORM, new AboutForm());
 
             product = new Product();
 

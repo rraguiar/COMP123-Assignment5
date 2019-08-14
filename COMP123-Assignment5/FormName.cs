@@ -25,6 +25,7 @@ namespace COMP123_Assignment5
         SELECT_FORM,
         PRODUCT_INFO_FORM,
         ORDER_FORM,
+        ABOUT_FORM,
         NUM_OF_FORMS
     }
 }
