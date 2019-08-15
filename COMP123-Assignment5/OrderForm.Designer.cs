@@ -132,8 +132,9 @@
             // backBToolStripMenuItem
             // 
             this.backBToolStripMenuItem.Name = "backBToolStripMenuItem";
-            this.backBToolStripMenuItem.Size = new System.Drawing.Size(132, 30);
+            this.backBToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.backBToolStripMenuItem.Text = "&Back";
+            this.backBToolStripMenuItem.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // helpToolStripMenuItem
             // 

@@ -86,7 +86,6 @@ namespace COMP123_Assignment5
             var cells = rows[rowIndex].Cells;
 
             //adjust price with only 2 decimal places
-            string userSelectionString = string.Empty;
             string price = cells[(int)SelectedComputerField.PRICE].Value.ToString();
             string priceAdjusted = string.Empty;
             int stringSize = (price.Length)-2;
@@ -96,6 +95,7 @@ namespace COMP123_Assignment5
             }
 
             //load the selected product´s string to the label
+            string userSelectionString = string.Empty;
             userSelectionString += cells[(int)SelectedComputerField.PRODUCT_ID].Value.ToString() 
                 + " " + cells[(int)SelectedComputerField.MANUFACTURER].Value.ToString() 
                 + " " + cells[(int)SelectedComputerField.MODEL].Value.ToString() 
@@ -105,7 +105,7 @@ namespace COMP123_Assignment5
 
             //load content into SelectedComputer class to later save on file
             Program.selectedComputer.ProductID = cells[(int)SelectedComputerField.PRODUCT_ID].Value.ToString();
-            Program.selectedComputer.Price = cells[(int)SelectedComputerField.PRICE].Value.ToString();
+            Program.selectedComputer.Price = priceAdjusted;
             Program.selectedComputer.Manufacturer = cells[(int)SelectedComputerField.MANUFACTURER].Value.ToString();
             Program.selectedComputer.Model = cells[(int)SelectedComputerField.MODEL].Value.ToString();
             Program.selectedComputer.RAMType = cells[(int)SelectedComputerField.RAM_TYPE].Value.ToString();

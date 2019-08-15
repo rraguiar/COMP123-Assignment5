@@ -51,11 +51,13 @@ namespace COMP123_Assignment5
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (Program.LoadSavedOrder == true)
-            {
-                //here I will load the content of the file.
-                MessageBox.Show("clicked on load saved order button");
-            }
+                loadSavedFile();
+        }
+
+        private void loadSavedFile()
+        {
+            //here I will load the content of the file.
+            MessageBox.Show("clicked on load saved order button");
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -102,6 +104,35 @@ namespace COMP123_Assignment5
                 outputString.Dispose();
             }
 
+        }
+
+        private void ProductInfoForm_Activated(object sender, EventArgs e)
+        {
+            if (Program.LoadSavedOrder == true)
+            {
+                Program.LoadSavedOrder = false;
+                loadSavedFile();
+            }
+            else
+            {
+                //load content from the selectedComputer class to the form labels
+                ProductIdInfoLabel.Text = Program.selectedComputer.ProductID;
+                ConditionInfoLabel.Text = Program.selectedComputer.Condition;
+                CostInfoLabel.Text = Program.selectedComputer.Price;
+                PlatformInfoLabel.Text = Program.selectedComputer.Platform;
+                OSInfoLabel.Text = Program.selectedComputer.OS;
+                ManufacturerInfoLabel.Text = Program.selectedComputer.Manufacturer;
+                ModelInfoLabel.Text = Program.selectedComputer.Model;
+                MemoryInfoLabel.Text = Program.selectedComputer.RAMSize;
+                LCDSizeInfoLabel.Text = Program.selectedComputer.ScreenSize;
+                HDDInfoLabel.Text = Program.selectedComputer.HDDSize;
+                CPUBrandInfoLabel.Text = Program.selectedComputer.CPUBrand;
+                CPUNumberInfoLabel.Text = Program.selectedComputer.CPUNumber;
+                GPUTypeInfoLabel.Text = Program.selectedComputer.GPUType;
+                CPUTypeInfoLabel.Text = Program.selectedComputer.CPUType;
+                CPUSpeedInfoLabel.Text = Program.selectedComputer.CPUSpeed;
+                WebCamInfoLabel.Text = Program.selectedComputer.Webcam;
+            }
         }
     }
 }
