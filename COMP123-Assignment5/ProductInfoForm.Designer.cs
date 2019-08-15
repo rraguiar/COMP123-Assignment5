@@ -75,9 +75,13 @@
             this.MemoryLabel = new System.Windows.Forms.Label();
             this.LCDSizeLabel = new System.Windows.Forms.Label();
             this.ProductIdInfoLabel = new System.Windows.Forms.Label();
+            this.ProductInfoFormToolStrip = new System.Windows.Forms.ToolStrip();
+            this.ProductInfoFormOpenToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.ProductInfoFormSaveToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.ProductInfoMenuStrip.SuspendLayout();
             this.ProductInfoGroupBox.SuspendLayout();
             this.TechSpecsGroupBox.SuspendLayout();
+            this.ProductInfoFormToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // CancelButton
@@ -132,7 +136,7 @@
             this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.openToolStripMenuItem.Text = "&Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -142,18 +146,19 @@
             this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.saveToolStripMenuItem.Text = "&Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(202, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(249, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -195,7 +200,7 @@
             // ProductIdLabel
             // 
             this.ProductIdLabel.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductIdLabel.Location = new System.Drawing.Point(5, 63);
+            this.ProductIdLabel.Location = new System.Drawing.Point(5, 76);
             this.ProductIdLabel.Name = "ProductIdLabel";
             this.ProductIdLabel.Size = new System.Drawing.Size(135, 33);
             this.ProductIdLabel.TabIndex = 7;
@@ -205,7 +210,7 @@
             // ConditionLabel
             // 
             this.ConditionLabel.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConditionLabel.Location = new System.Drawing.Point(304, 62);
+            this.ConditionLabel.Location = new System.Drawing.Point(304, 75);
             this.ConditionLabel.Name = "ConditionLabel";
             this.ConditionLabel.Size = new System.Drawing.Size(123, 33);
             this.ConditionLabel.TabIndex = 8;
@@ -215,7 +220,7 @@
             // CostLabel
             // 
             this.CostLabel.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CostLabel.Location = new System.Drawing.Point(613, 63);
+            this.CostLabel.Location = new System.Drawing.Point(613, 76);
             this.CostLabel.Name = "CostLabel";
             this.CostLabel.Size = new System.Drawing.Size(69, 33);
             this.CostLabel.TabIndex = 9;
@@ -227,7 +232,7 @@
             this.ConditionInfoLabel.BackColor = System.Drawing.Color.White;
             this.ConditionInfoLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ConditionInfoLabel.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConditionInfoLabel.Location = new System.Drawing.Point(433, 61);
+            this.ConditionInfoLabel.Location = new System.Drawing.Point(433, 74);
             this.ConditionInfoLabel.Name = "ConditionInfoLabel";
             this.ConditionInfoLabel.Size = new System.Drawing.Size(139, 33);
             this.ConditionInfoLabel.TabIndex = 11;
@@ -238,7 +243,7 @@
             this.CostInfoLabel.BackColor = System.Drawing.Color.White;
             this.CostInfoLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CostInfoLabel.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CostInfoLabel.Location = new System.Drawing.Point(688, 61);
+            this.CostInfoLabel.Location = new System.Drawing.Point(688, 74);
             this.CostInfoLabel.Name = "CostInfoLabel";
             this.CostInfoLabel.Size = new System.Drawing.Size(139, 33);
             this.CostInfoLabel.TabIndex = 12;
@@ -255,7 +260,7 @@
             this.ProductInfoGroupBox.Controls.Add(this.PlatformLabel);
             this.ProductInfoGroupBox.Controls.Add(this.OSLabel);
             this.ProductInfoGroupBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductInfoGroupBox.Location = new System.Drawing.Point(12, 116);
+            this.ProductInfoGroupBox.Location = new System.Drawing.Point(12, 129);
             this.ProductInfoGroupBox.Name = "ProductInfoGroupBox";
             this.ProductInfoGroupBox.Size = new System.Drawing.Size(982, 144);
             this.ProductInfoGroupBox.TabIndex = 13;
@@ -367,7 +372,7 @@
             this.TechSpecsGroupBox.Controls.Add(this.MemoryLabel);
             this.TechSpecsGroupBox.Controls.Add(this.LCDSizeLabel);
             this.TechSpecsGroupBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TechSpecsGroupBox.Location = new System.Drawing.Point(12, 283);
+            this.TechSpecsGroupBox.Location = new System.Drawing.Point(12, 296);
             this.TechSpecsGroupBox.Name = "TechSpecsGroupBox";
             this.TechSpecsGroupBox.Size = new System.Drawing.Size(982, 211);
             this.TechSpecsGroupBox.TabIndex = 22;
@@ -568,11 +573,43 @@
             this.ProductIdInfoLabel.BackColor = System.Drawing.Color.White;
             this.ProductIdInfoLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ProductIdInfoLabel.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductIdInfoLabel.Location = new System.Drawing.Point(146, 63);
+            this.ProductIdInfoLabel.Location = new System.Drawing.Point(146, 76);
             this.ProductIdInfoLabel.Name = "ProductIdInfoLabel";
             this.ProductIdInfoLabel.Size = new System.Drawing.Size(152, 33);
             this.ProductIdInfoLabel.TabIndex = 10;
             this.ProductIdInfoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ProductInfoFormToolStrip
+            // 
+            this.ProductInfoFormToolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.ProductInfoFormToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ProductInfoFormOpenToolStripButton,
+            this.ProductInfoFormSaveToolStripButton});
+            this.ProductInfoFormToolStrip.Location = new System.Drawing.Point(0, 33);
+            this.ProductInfoFormToolStrip.Name = "ProductInfoFormToolStrip";
+            this.ProductInfoFormToolStrip.Size = new System.Drawing.Size(1006, 31);
+            this.ProductInfoFormToolStrip.TabIndex = 23;
+            this.ProductInfoFormToolStrip.Text = "ProductInfoFormToolStrip";
+            // 
+            // ProductInfoFormOpenToolStripButton
+            // 
+            this.ProductInfoFormOpenToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ProductInfoFormOpenToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("ProductInfoFormOpenToolStripButton.Image")));
+            this.ProductInfoFormOpenToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ProductInfoFormOpenToolStripButton.Name = "ProductInfoFormOpenToolStripButton";
+            this.ProductInfoFormOpenToolStripButton.Size = new System.Drawing.Size(28, 28);
+            this.ProductInfoFormOpenToolStripButton.Text = "&Open";
+            this.ProductInfoFormOpenToolStripButton.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
+            // ProductInfoFormSaveToolStripButton
+            // 
+            this.ProductInfoFormSaveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ProductInfoFormSaveToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("ProductInfoFormSaveToolStripButton.Image")));
+            this.ProductInfoFormSaveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ProductInfoFormSaveToolStripButton.Name = "ProductInfoFormSaveToolStripButton";
+            this.ProductInfoFormSaveToolStripButton.Size = new System.Drawing.Size(28, 28);
+            this.ProductInfoFormSaveToolStripButton.Text = "&Save";
+            this.ProductInfoFormSaveToolStripButton.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // ProductInfoForm
             // 
@@ -580,6 +617,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1006, 595);
             this.ControlBox = false;
+            this.Controls.Add(this.ProductInfoFormToolStrip);
             this.Controls.Add(this.TechSpecsGroupBox);
             this.Controls.Add(this.ProductInfoGroupBox);
             this.Controls.Add(this.CostInfoLabel);
@@ -605,6 +643,8 @@
             this.ProductInfoMenuStrip.PerformLayout();
             this.ProductInfoGroupBox.ResumeLayout(false);
             this.TechSpecsGroupBox.ResumeLayout(false);
+            this.ProductInfoFormToolStrip.ResumeLayout(false);
+            this.ProductInfoFormToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -658,5 +698,8 @@
         private System.Windows.Forms.Label HDDInfoLabel;
         private System.Windows.Forms.Label HDDLabel;
         private System.Windows.Forms.Label ProductIdInfoLabel;
+        private System.Windows.Forms.ToolStrip ProductInfoFormToolStrip;
+        private System.Windows.Forms.ToolStripButton ProductInfoFormOpenToolStripButton;
+        private System.Windows.Forms.ToolStripButton ProductInfoFormSaveToolStripButton;
     }
 }

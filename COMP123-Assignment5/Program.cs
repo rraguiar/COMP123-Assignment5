@@ -28,6 +28,7 @@ namespace COMP123_Assignment5
         public static Dictionary<FormName, Form> Forms;
         public static bool LoadSavedOrder = false;
         public static Product product;
+        public static SelectedComputer selectedComputer;
 
         /// <summary>
         /// The main entry point for the application.
@@ -47,6 +48,8 @@ namespace COMP123_Assignment5
             Forms.Add(FormName.ABOUT_FORM, new AboutForm());
 
             product = new Product();
+
+            selectedComputer = new SelectedComputer();
 
             Application.Run(Forms[FormName.SPLASH_FORM]);
         }

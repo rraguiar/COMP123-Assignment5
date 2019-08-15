@@ -66,6 +66,7 @@
     <Compile Include="AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SelectedComputer.cs" />
     <Compile Include="Models\DollarComputersContext.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="OrderForm.cs">
