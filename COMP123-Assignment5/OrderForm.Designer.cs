@@ -712,6 +712,7 @@
             this.Name = "OrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderForm";
+            this.Load += new System.EventHandler(this.OrderForm_Load);
             this.OrderMenuStrip.ResumeLayout(false);
             this.OrderMenuStrip.PerformLayout();
             this.OrderFormSystemComponentsGroupBox.ResumeLayout(false);
