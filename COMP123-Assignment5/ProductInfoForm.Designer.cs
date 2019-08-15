@@ -136,7 +136,7 @@
             this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
             this.openToolStripMenuItem.Text = "&Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -259,7 +259,7 @@
             this.ProductInfoGroupBox.Controls.Add(this.PlatformInfoLabel);
             this.ProductInfoGroupBox.Controls.Add(this.PlatformLabel);
             this.ProductInfoGroupBox.Controls.Add(this.OSLabel);
-            this.ProductInfoGroupBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductInfoGroupBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProductInfoGroupBox.Location = new System.Drawing.Point(12, 129);
             this.ProductInfoGroupBox.Name = "ProductInfoGroupBox";
             this.ProductInfoGroupBox.Size = new System.Drawing.Size(982, 144);
@@ -371,7 +371,7 @@
             this.TechSpecsGroupBox.Controls.Add(this.HDDLabel);
             this.TechSpecsGroupBox.Controls.Add(this.MemoryLabel);
             this.TechSpecsGroupBox.Controls.Add(this.LCDSizeLabel);
-            this.TechSpecsGroupBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TechSpecsGroupBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TechSpecsGroupBox.Location = new System.Drawing.Point(12, 296);
             this.TechSpecsGroupBox.Name = "TechSpecsGroupBox";
             this.TechSpecsGroupBox.Size = new System.Drawing.Size(982, 211);
