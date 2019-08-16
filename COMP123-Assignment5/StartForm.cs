@@ -31,17 +31,32 @@ namespace COMP123_Assignment5
             InitializeComponent();
         }
 
+        /// <summary>
+        /// This method handle the StartNewOrderClick event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void StartNewOrderButton_Click(object sender, EventArgs e)
         {
             Program.Forms[FormName.SELECT_FORM].Show();
             this.Hide();
         }
 
+        /// <summary>
+        /// This method handle the ExitButton click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ExitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// This method handle the loadSavedOrderButton click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LoadSavedOrderButton_Click(object sender, EventArgs e)
         {
             Program.LoadSavedOrder = true;

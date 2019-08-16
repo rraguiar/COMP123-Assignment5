@@ -103,7 +103,7 @@ namespace COMP123_Assignment5
 
             UserSelectionTextBox.Text = userSelectionString;
 
-            //load content into SelectedComputer class to later save on file
+            //load content into SelectedComputer class to later show on the ProductInfoForm and/or save on file
             Program.selectedComputer.ProductID = cells[(int)SelectedComputerField.PRODUCT_ID].Value.ToString();
             Program.selectedComputer.Price = priceAdjusted;
             Program.selectedComputer.Manufacturer = cells[(int)SelectedComputerField.MANUFACTURER].Value.ToString();
@@ -138,17 +138,6 @@ namespace COMP123_Assignment5
 
             //enable next button after selection
             SelectFormNextButton.Enabled = true;
-
-           //load all selected row to outputString for later use - files load/save?
-            //var columnCount = ProductDataGridView.ColumnCount;
-
-            //rows[rowIndex].Selected = true;
-
-            //string outputString = string.Empty;
-            //for (int index=0; index< columnCount; index++)
-            //{
-            //    outputString += cells[index].Value.ToString() + " ";
-            //}
         }
     }
 }

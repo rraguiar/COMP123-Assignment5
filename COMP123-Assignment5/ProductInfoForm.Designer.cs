@@ -78,6 +78,8 @@
             this.ProductInfoFormToolStrip = new System.Windows.Forms.ToolStrip();
             this.ProductInfoFormOpenToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.ProductInfoFormSaveToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.productOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.productSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.ProductInfoMenuStrip.SuspendLayout();
             this.ProductInfoGroupBox.SuspendLayout();
             this.TechSpecsGroupBox.SuspendLayout();
@@ -86,10 +88,10 @@
             // 
             // CancelButton
             // 
-            this.CancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelButton.Location = new System.Drawing.Point(781, 532);
+            this.CancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelButton.Location = new System.Drawing.Point(798, 538);
             this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(96, 47);
+            this.CancelButton.Size = new System.Drawing.Size(95, 45);
             this.CancelButton.TabIndex = 2;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
@@ -97,10 +99,10 @@
             // 
             // NextButtonToOrderForm
             // 
-            this.NextButtonToOrderForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextButtonToOrderForm.Location = new System.Drawing.Point(894, 532);
+            this.NextButtonToOrderForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextButtonToOrderForm.Location = new System.Drawing.Point(899, 538);
             this.NextButtonToOrderForm.Name = "NextButtonToOrderForm";
-            this.NextButtonToOrderForm.Size = new System.Drawing.Size(96, 47);
+            this.NextButtonToOrderForm.Size = new System.Drawing.Size(95, 45);
             this.NextButtonToOrderForm.TabIndex = 3;
             this.NextButtonToOrderForm.Text = "Next";
             this.NextButtonToOrderForm.UseVisualStyleBackColor = true;
@@ -179,10 +181,10 @@
             // 
             // SelectAnotherProductButton
             // 
-            this.SelectAnotherProductButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SelectAnotherProductButton.Location = new System.Drawing.Point(513, 532);
+            this.SelectAnotherProductButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectAnotherProductButton.Location = new System.Drawing.Point(542, 538);
             this.SelectAnotherProductButton.Name = "SelectAnotherProductButton";
-            this.SelectAnotherProductButton.Size = new System.Drawing.Size(250, 47);
+            this.SelectAnotherProductButton.Size = new System.Drawing.Size(250, 45);
             this.SelectAnotherProductButton.TabIndex = 5;
             this.SelectAnotherProductButton.Text = "Select Another Product";
             this.SelectAnotherProductButton.UseVisualStyleBackColor = true;
@@ -611,6 +613,15 @@
             this.ProductInfoFormSaveToolStripButton.Text = "&Save";
             this.ProductInfoFormSaveToolStripButton.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
+            // productOpenFileDialog
+            // 
+            this.productOpenFileDialog.CheckFileExists = false;
+            // 
+            // productSaveFileDialog
+            // 
+            this.productSaveFileDialog.CheckFileExists = true;
+            this.productSaveFileDialog.Title = "Save Product";
+            // 
             // ProductInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 35F);
@@ -701,5 +712,7 @@
         private System.Windows.Forms.ToolStrip ProductInfoFormToolStrip;
         private System.Windows.Forms.ToolStripButton ProductInfoFormOpenToolStripButton;
         private System.Windows.Forms.ToolStripButton ProductInfoFormSaveToolStripButton;
+        private System.Windows.Forms.SaveFileDialog productSaveFileDialog;
+        public System.Windows.Forms.OpenFileDialog productOpenFileDialog;
     }
 }

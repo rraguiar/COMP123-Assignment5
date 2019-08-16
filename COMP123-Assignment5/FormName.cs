@@ -18,6 +18,7 @@ using System.Threading.Tasks;
 
 namespace COMP123_Assignment5
 {
+    //reference to the library of forms
     public enum FormName
     {
         SPLASH_FORM,

@@ -33,6 +33,8 @@
             this.SelectOrderCancelButton = new System.Windows.Forms.Button();
             this.HardwarListInfoLabel = new System.Windows.Forms.Label();
             this.ProductDataGridView = new System.Windows.Forms.DataGridView();
+            this.UserSelectionLabel = new System.Windows.Forms.Label();
+            this.UserSelectionTextBox = new System.Windows.Forms.TextBox();
             this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,17 +67,16 @@
             this.powerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.webcamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.UserSelectionLabel = new System.Windows.Forms.Label();
-            this.UserSelectionTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ProductDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // SelectFormNextButton
             // 
-            this.SelectFormNextButton.Location = new System.Drawing.Point(725, 493);
+            this.SelectFormNextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectFormNextButton.Location = new System.Drawing.Point(731, 487);
             this.SelectFormNextButton.Name = "SelectFormNextButton";
-            this.SelectFormNextButton.Size = new System.Drawing.Size(101, 39);
+            this.SelectFormNextButton.Size = new System.Drawing.Size(95, 45);
             this.SelectFormNextButton.TabIndex = 1;
             this.SelectFormNextButton.Text = "Next";
             this.SelectFormNextButton.UseVisualStyleBackColor = true;
@@ -83,9 +84,10 @@
             // 
             // SelectOrderCancelButton
             // 
-            this.SelectOrderCancelButton.Location = new System.Drawing.Point(619, 493);
+            this.SelectOrderCancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectOrderCancelButton.Location = new System.Drawing.Point(630, 487);
             this.SelectOrderCancelButton.Name = "SelectOrderCancelButton";
-            this.SelectOrderCancelButton.Size = new System.Drawing.Size(101, 39);
+            this.SelectOrderCancelButton.Size = new System.Drawing.Size(95, 45);
             this.SelectOrderCancelButton.TabIndex = 1;
             this.SelectOrderCancelButton.Text = "Cancel";
             this.SelectOrderCancelButton.UseVisualStyleBackColor = true;
@@ -154,6 +156,26 @@
             this.ProductDataGridView.Size = new System.Drawing.Size(816, 432);
             this.ProductDataGridView.TabIndex = 3;
             this.ProductDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductDataGridView_CellClick);
+            // 
+            // UserSelectionLabel
+            // 
+            this.UserSelectionLabel.AutoSize = true;
+            this.UserSelectionLabel.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserSelectionLabel.Location = new System.Drawing.Point(9, 479);
+            this.UserSelectionLabel.Name = "UserSelectionLabel";
+            this.UserSelectionLabel.Size = new System.Drawing.Size(182, 26);
+            this.UserSelectionLabel.TabIndex = 4;
+            this.UserSelectionLabel.Text = "Your Selection:";
+            // 
+            // UserSelectionTextBox
+            // 
+            this.UserSelectionTextBox.BackColor = System.Drawing.Color.White;
+            this.UserSelectionTextBox.Location = new System.Drawing.Point(136, 476);
+            this.UserSelectionTextBox.Name = "UserSelectionTextBox";
+            this.UserSelectionTextBox.ReadOnly = true;
+            this.UserSelectionTextBox.Size = new System.Drawing.Size(454, 35);
+            this.UserSelectionTextBox.TabIndex = 5;
+            this.UserSelectionTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // productIDDataGridViewTextBoxColumn
             // 
@@ -437,25 +459,6 @@
             // productBindingSource
             // 
             this.productBindingSource.DataSource = typeof(COMP123_Assignment5.Models.Product);
-            // 
-            // UserSelectionLabel
-            // 
-            this.UserSelectionLabel.AutoSize = true;
-            this.UserSelectionLabel.Location = new System.Drawing.Point(9, 479);
-            this.UserSelectionLabel.Name = "UserSelectionLabel";
-            this.UserSelectionLabel.Size = new System.Drawing.Size(177, 29);
-            this.UserSelectionLabel.TabIndex = 4;
-            this.UserSelectionLabel.Text = "Your Selection:";
-            // 
-            // UserSelectionTextBox
-            // 
-            this.UserSelectionTextBox.BackColor = System.Drawing.Color.White;
-            this.UserSelectionTextBox.Location = new System.Drawing.Point(136, 476);
-            this.UserSelectionTextBox.Name = "UserSelectionTextBox";
-            this.UserSelectionTextBox.ReadOnly = true;
-            this.UserSelectionTextBox.Size = new System.Drawing.Size(454, 35);
-            this.UserSelectionTextBox.TabIndex = 5;
-            this.UserSelectionTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // SelectProductForm
             // 
